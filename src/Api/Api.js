@@ -1,5 +1,5 @@
 const api = {
-  getBallotData() {
+  async getBallotData() {
     return fetch('/api/getBallotData').then(res => {
       return res.json();
     });

@@ -1,32 +1,78 @@
-.App {
-  text-align: center;
+body {
+  font-family: 'Roboto', sans-serif; /* Use Roboto font as the default font for the body */
 }
 
-.App-logo {
-  height: 15vmin;
-  pointer-events: none;
+.category-container {
+  width: 100%;
+  background-color: #0D2436;
+  color: #FFFFFF;
 }
 
-.App-header {
-  background-color: #50B074;
-  min-height: 100vh;
+.cat-title {
+  text-align: left;
+  padding-left: 10px;
+  background-color: #9bc0dc;
+  font-size: 36px;
+}
+
+.all-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.card {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+ margin: 10px 10px;
+  background-color: #8a8ae3;
+}
+
+.item-image {
+  width: 70%;
+  height: 60%;
+  border-radius: 50%;
+}
+
+.image-div {
+  width: 70%;
+  height: 60%;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ border-radius: 50%;
+}
+
+.btn-div {
+  padding: 10px;
+}
+
+.select-btn {
+  padding: 10px;
+  background-color: #9bc0dc;
+  font-size: 15px;
+}
+
+.submit-btn-div {
+  padding: 10px;
+  position: relative;
+  left: 80%;
+  top: -90px;
+}
+
+.submit-btn {
+  padding: 10px;
   color: white;
+  background-color: #6e8603;
+  font-size: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.card:hover,
+.submit-btn:hover {
+  background-color: #34AC9C;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.active {
+  background-color: #009B86;
 }
