@@ -76,3 +76,24 @@ body {
 .active {
   background-color: #009B86;
 }
+
+.model {
+background-color: #2ed992;
+display: flex;
+justify-content: center;
+align-items: center;
+width: 500px;
+height: 400px;
+position:fixed;
+left: 30%;
+bottom: 20%;
+z-index: 10;
+}
+
+.close-btn {
+  width: 4%;
+  height: 5%;
+  position: relative;
+  left: 18%;
+  bottom: 45%;
+}

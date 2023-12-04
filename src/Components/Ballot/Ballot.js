@@ -6,6 +6,7 @@ const Ballot = () => {
   const [ ballotData, setBallotData ] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [activeCard, setActiveCard] = useState([]);
+  const [submissionStatus, setSubmissionStatus] = useState('')
 
   
   useEffect(() =>{
@@ -49,21 +50,16 @@ const Ballot = () => {
   }
 
   const onSubmit = () =>{
-    if(activeCard.length > 0){
-    return(
-      <div className='model'>
-        <h3>Successfull</h3>
-        <img src={close} alt='close' />
-      </div>
-    )
+    let length = activeCard.length;
+    if(length > 0){
+   setSubmissionStatus(`${length} nominees selected Successfuly`)
     }else{
-      return(
-        <div className='model'>
-          <h3>No selected nominees</h3>
-          <img src={close} alt='close' />
-        </div>
-      )
+      setSubmissionStatus('No selected nominees')
     }
+  }
+
+  const onClosing = () =>{
+    setSubmissionStatus('')
   }
   
   return (
@@ -94,6 +90,12 @@ const Ballot = () => {
     <div className='submit-btn-div'>
       <button className='submit-btn' type='submit' onClick={onSubmit}>SUBMIT BALLOT <br />BUTTON</button>
     </div>
+    {submissionStatus && (
+  <div className='model'>
+    <h3>{submissionStatus}</h3>
+    <img src={close} alt='close' className='close-btn' onClick={onClosing} />
+  </div>
+)}
     </div>
   )
 }
